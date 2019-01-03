@@ -1,0 +1,140 @@
+<!Doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+      <title>THE CHAT APP</title>
+      <link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.png' />
+      <style>
+         div.scrollmenu {
+         overflow: auto;
+         white-space: nowrap;
+         }
+         div.scrollmenu button {
+         display: inline-block;
+         background-color: transparent;
+         border: 0;
+         text-align: center;
+         padding: 14px;
+         text-decoration: none;
+         }
+         div.scrollmenu button img
+         {
+         vertical-align: middle !important;
+         }
+         div.scrollmenu button:hover {
+         border-right: 1px solid blue;
+         border-left: 1px solid blue;
+         z-index=9999999;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Start Navigation -->
+      <nav class="navbar navbar-sticky bootsnav">
+         <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header navbar-right">
+               <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                  <li><a onclick="logout()">Logout</a></li>
+               </ul>
+            </div>
+            <!-- End Header Navigation -->
+         </div>
+      </nav>
+      <!-- End Navigation -->
+      <div class="row">
+         <div class="col-md-12">
+            <div class="head">
+               <section id="friends_list">
+                  <div class="scrollmenu">
+                     <button onclick="updateDynamicRecieverId(1)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER1</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(2)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER2</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(3)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER3</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(4)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER4</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(5)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER5</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(6)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER6</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(7)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER18</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(8)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER8</strong>
+                     </button>
+                     <button onclick="updateDynamicRecieverId(9)">
+                     &nbsp;<img src="assets/images/user.png" style="border-radius: 50%;" width="45" height="45" alt="user-img"/>
+                     <strong><br />USER9</strong>
+                     </button>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      <section id="dashboard_div">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="col-md-3">
+                  <div class="panel panel-default style">
+                     <div class="panel-body" id="userProfile">
+                        <div class="user_info">
+                           <div class="user_picture user_picture_offer">
+                              <img  class="img-responsive "  src="assets/images/user.jpg" alt="user picture"/>
+                           </div>
+                           <div class="user_details">
+                              <h4> <br/> Admin </h4>
+                              <h4 >2/January/2019</h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-9" style="margin-left:-30px;">
+                  <div class="panel panel-default style">
+                     <div class="panel-body" id="body">
+                        <div class="col-md-12">
+                           <div  id="messages">
+                              <ul class="list-unstyled media-block" id="msgsHolder">
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" class="form-control style" id="mess" placeholder="Message" required>
+                        <button type="submit" id="sendbutton" style="border-radius:0px;padding:1px 16px;"
+                           class="btn btn-primary btn-lg form-control" onclick="sendMsgs()">Send</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script src="assets/js/jquery.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/bootsnav.js"></script>
+      <script src="assets/js/chat.js" ></script>
+   </body>
+</html>
